@@ -1,0 +1,94 @@
+.footer {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    &__container {}
+    &__title {
+        font-size: 50px;
+        color: $color-accent;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    &__text {
+        font-size: 14px;
+        color: $color-grey;
+    }
+    &__columns {
+        display: flex;
+        margin-top: 40px;
+    }
+    &__column {}
+    &__column-title {
+        font-size: 24px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    &__categories {
+        margin-right: 120px;
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0 20px;
+    }
+    &__link {
+        color: $color-grey;
+        display: block;
+        margin-bottom: 5px;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__blog {
+        margin-right: 55px;
+        list-style: none;
+    }
+    &__contacts {
+        list-style: none;
+    }
+    &__rights {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    &__rights-text {
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+		&__container {}
+		&__title {
+            font-size: 30px;
+        }
+		&__text {
+            display: none;
+        }
+		&__columns {
+            flex-direction: column;
+            margin-top: 0;
+        }
+		&__column {
+            margin-top: 25px;
+        }
+		&__column-title {}
+		&__categories {
+            width: 100%;
+            grid-template-columns: 1fr 3fr;
+        }
+		&__elem {}
+		&__link {}
+		&__blog {
+            width: 100%;
+        }
+		&__contacts {
+            width: 100%;
+        }
+		&__rights {
+            flex-direction: column;
+        }
+		&__rights-text {
+            margin-top: 5px;
+        }
+    }
+}

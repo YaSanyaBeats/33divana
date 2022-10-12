@@ -1,0 +1,201 @@
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    padding-bottom: 50px;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        flex: 0 0 520px;
+        margin-right: 40px;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-size: 50px;
+        text-align: right;
+    }
+    &__accent-text {
+        color: $color-accent;
+    }
+    &__description {
+        color: $color-grey;
+        width: 260px;
+        margin-top: -50px;
+    }
+    &__form {
+        display: flex;
+        margin-top: 35px;
+        & a {
+            text-decoration: none;
+        }
+    }
+    &__select {
+        margin-right: 30px;
+    }
+    &__button {
+        width: 210px;
+        border: 1px solid $color-border;
+        padding: 15px 20px;
+        border-radius: 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: transparent;
+        transition: .3s;
+        cursor: pointer;
+        &:hover {
+            background-color: white;
+        }
+    }
+    &__arrow-wrapper {
+        border: 1px solid $color-accent;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__arrow {
+        
+    }
+    &__right {}
+    &__lookbook {}
+}
+.container {
+}
+.hero-select {
+    position: relative;
+    cursor: pointer;
+    &__title {}
+    &__icon {
+        width: 5px;
+        transform: rotate(180deg);
+        transition: .3s;
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+        position: absolute;
+        top: 50px;
+        left: 3px;
+        right: 0;
+        flex-direction: column;
+        width: 204px;
+        padding: 20px 5px 5px 5px;
+        background-color: $color-white;
+        box-shadow: 0px 14px 26px rgba(176, 176, 178, 0.12);
+        border-radius: 7px;
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transition: .3s;
+    }
+    &__link {
+        text-decoration: none;
+        transition: .3s;
+        padding: 10px 5px;
+        border-radius: 7px;
+        &:hover {
+            background-color: $color-grey2;
+            & .hero-select__elem {
+                color: $color-accent;
+            }
+        }
+    }
+    &__elem {
+        color: $color-grey;
+        margin-top: 0;
+    }
+    &__button-wrapper {
+        width: 210px;
+        border: 1px solid $color-border;
+        padding: 15px 20px;
+        border-radius: 7px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        cursor: pointer;
+        transition: .3s;
+        z-index: 2;
+        position: relative;
+        &:hover {
+            background-color: white;
+        }
+    }
+    &_active {
+        & .hero-select__icon {
+            transform: rotate(0);
+        }
+        & .hero-select__list {
+            opacity: 1;
+            visibility: visible;
+            max-height: 220px;
+        }
+        & .hero-select__button-wrapper {
+            background-color: white;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .hero {
+        &__lookbook {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        &__container {
+        }
+        &__left {
+            flex-basis: 100%;
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__accent-text {}
+        &__description {
+            margin-top: 0;
+        }
+        &__form {
+            flex-direction: column-reverse;
+        }
+        &__select {
+            width: 100%;
+            font-size: 14px;
+        }
+        &__button {
+            margin-bottom: 20px;
+            width: 100%;
+            font-size: 14px;
+        }
+        &__arrow-wrapper {}
+        &__arrow {}
+        &__right {}
+        &__lookbook {}
+    }
+    .container {
+    }
+    .hero-select {
+        &_active {}
+        &__list {
+            width: calc(100% - 10px);
+        }
+        &__link {}
+        &__elem {}
+        &__button-wrapper {
+            width: 100%;
+            min-height: 60px;
+            padding-right: 32px;
+        }
+        &__title {}
+        &__icon {}
+    }
+}

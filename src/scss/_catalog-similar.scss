@@ -1,0 +1,28 @@
+.catalog-similar {
+    &__container {}
+    &__title {
+        font-size: 24px;
+        text-transform: uppercase;
+    }
+    &__cards {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+    &__card {}
+}
+.catalog-card {
+    &__header {}
+    &__tag {}
+    &__color {}
+    &__img-wrapper {}
+    &__img-shadow {}
+    &__img {}
+    &__info {}
+    &__title {}
+    &__right {}
+    &__price {}
+    &__button-wrapper {}
+    &__button {}
+}

@@ -1,0 +1,114 @@
+.advantages {
+    margin-bottom: 150px;
+    &__container {}
+    &__title {
+        font-size: 50px;
+        text-align: center;
+        width: 550px;
+        text-transform: uppercase;
+        margin: auto;
+        color: $color-black;
+        margin-bottom: 55px;
+    }
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.container {
+}
+.advantages-card {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img-wrapper {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    &__img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 50%;
+        z-index: 2;
+    }
+    &__img-shadow {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        filter: blur(25px);
+    }
+    &__title {
+        text-align: center;
+        font-size: 24px;
+        color: $color-black;
+        text-transform: uppercase;
+        width: 220px;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+    &__text {
+        color: $color-grey;
+        font-size: 16px;
+        line-height: 23px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .advantages {
+		&__container {}
+		&__title {
+            font-size: 30px;
+        }
+		&__cards {}
+		&__card {
+            flex-basis: 220px;
+        }
+    }
+    .advantages-card {
+        &__img-wrapper {}
+        &__img-shadow {
+            width: 200px;
+            height: 200px;
+        }
+        &__img {
+            width: 200px;
+            height: 200px;
+        }
+        &__title {
+            font-size: 24px;
+        }
+        &__text {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantages {
+		&__container {}
+		&__title {
+            width: 100%;
+        }
+		&__cards {
+            flex-direction: column;
+            text-align: center;
+        }
+		&__card {
+            margin-bottom: 30px;
+        }
+    }
+    .advantages-card {
+        &__img-wrapper {}
+        &__img-shadow {}
+        &__img {}
+        &__title {}
+        &__text {}
+    }
+}

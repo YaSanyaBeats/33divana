@@ -1,0 +1,146 @@
+.product {
+    margin-bottom: 60px;
+    &__container {
+        
+    }
+    &__breadcrumbs {
+        margin-bottom: 45px;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 520px 1fr;
+        justify-content: space-between;
+    }
+    &__left {
+        margin-right: 40px;
+    }
+    &__swiper {
+        & img {
+            width: 100%;
+        }
+        & .swiper-slide {
+            padding: 0 60px;
+        }
+        & .swiper-button-next::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url('../img/icons/arrow-right.svg') no-repeat 50% 50%;
+            background-size: contain;
+        }
+        & .swiper-button-prev::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url('../img/icons/arrow-left.svg') no-repeat 50% 50%;
+            background-size: contain;
+        }
+    }
+    &__swiper-thumb {
+        margin-top: 30px;
+        & img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+        }
+    }
+    &__right {}
+    &__tag {
+        background-color: $color-accent;
+        color: $color-white;
+        border-radius: 3px;
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    &__title {
+        font-size: 50px;
+        text-transform: uppercase;
+        margin: 15px 0;
+    }
+    &__description {}
+    &__price {
+        display: block;
+        font-size: 24px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    &__button {
+        background-color: $color-white;
+        border: 1px solid $color-border;
+        border-radius: 7px;
+        padding: 15px 70px;
+        transition: .3s;
+        cursor: pointer;
+        &:hover {
+            background-color: $color-accent;
+            color: $color-white;
+        }
+    }    
+}
+
+.product-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding-right: 200px;
+    margin-bottom: 100px;
+    
+    &__wrapper {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: 1s;
+        &_active {
+            max-height: 500px;
+            opacity: 1;
+        }
+    }
+    &__title {
+        margin-top: 150px;
+        text-transform: uppercase;
+    }
+    &__label {
+        display: flex;
+        flex-direction: column;
+    }
+    &__text {
+        color: $color-grey;
+        background-color: $color-white;
+        position: relative;
+        left: 25px;
+        top: 10px;
+        width: fit-content;
+        padding: 0 5px;
+        font-size: 14px;
+    }
+    &__input {}
+    &__select {
+        background-color: #F5F5F5;
+        color: #404040;
+        border: 1px solid #E3E3E3;
+        border-radius: 7px;
+        padding: 15px;
+        font-size: 14px;
+    }
+    &__submit-wrapper {}
+    &__button {
+        background-color: $color-accent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 17px 20px 13px 20px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    &__text-rights {
+        color: $color-grey;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,16 @@
+.contacts {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__left {
+        flex: 0 0 600px;
+        margin-right: 60px;
+    }
+    &__right {}
+    &__text {
+        color: $color-black;
+    }
+}
+.container {
+}

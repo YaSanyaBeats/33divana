@@ -1,0 +1,157 @@
+.header {
+    padding: 50px 0;
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__left {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    &__burger-button {
+        margin-right: 15px;
+        border: 1px solid $color-border;
+        width: 25px;
+        height: 25px;
+        border-radius: 7px;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 9px;
+            left: 5px;
+            width: 13px;
+            height: 1px;
+            background-color: $color-accent;
+            border-radius: 1px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 13px;
+            left: 5px;
+            width: 13px;
+            height: 1px;
+            background-color: $color-accent;
+            border-radius: 1px;
+        }
+    }
+    &__logo {
+        margin-top: 2px;
+    }
+    &__logo-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    &__right {
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        margin-right: 10px;
+    }
+    &__cart-button {
+        width: 34px;
+        height: 34px;
+        background: url('../img/icons/phone.svg') no-repeat 50% 50%;
+        background-size: 12px 10px;
+        border-radius: 50%;
+        border: 1px solid $color-border;
+        margin-left: 5px;
+    }
+}
+
+.header-menu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+    width: 200px;
+    background-color: $color-white;
+    z-index: 10;
+    &_open {
+        opacity: 1;
+        visibility: visible;
+    }
+    &__list {
+        list-style: none;
+        border: 1px solid $color-border;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        &_inner {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            width: 300px;
+            background-color: $color-white;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+        }
+    }
+    &__elem {
+        padding: 10px;
+        border-radius: 10px;
+        transition: .3s;
+        margin-top: 0;
+        position: relative;
+        &:hover {
+            background-color: $color-grey2;
+            & .header-menu__list_inner {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+    &__link {
+        color: $color-black;
+        transition: .3s;
+        text-decoration: none;
+        
+        &:hover {
+            color: $color-accent;
+        }
+    }
+    &__text {
+        &_with-arrow {
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                right: -15px;
+                top: 50%;
+                width: 7px;
+                height: 7px;
+                background: url('../img/icons/chevron.svg') no-repeat 50% 50%;
+                background-size: contain;
+                transform: translateY(-50%) rotate(-90deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+		&__container {}
+		&__left {}
+		&__burger-button {}
+		&__logo {}
+		&__right {}
+		&__link {}
+		&__icon {
+            display: none;
+        }
+		&__cart-button {}
+    }
+}

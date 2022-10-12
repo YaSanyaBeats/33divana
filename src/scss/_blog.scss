@@ -1,0 +1,46 @@
+.blog {
+    &__container {}
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        flex: 0 0 250px;
+    }
+}
+.container {
+}
+.blog-card {
+    &__img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        height: 160px;
+        object-fit: cover;
+    }
+    &__date {
+        font-size: 14px;
+        color: $color-grey;
+    }
+    &__title {
+        font-size: 24px;
+        color: $color-black;
+        text-transform: uppercase;
+        margin: 10px 0;
+        text-decoration: none;
+        display: block;
+    }
+    &__link {
+        color: $color-accent;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .blog-card {
+        margin-bottom: 20px;
+    }
+}

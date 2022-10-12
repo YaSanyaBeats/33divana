@@ -1,0 +1,61 @@
+.lookbook {
+    &__img {
+        width: 100%;
+        border-radius: 25px;
+    }
+}
+
+.lookbook {
+    position: relative;
+    &__pointer {
+        width: 20px;
+        height: 20px;
+        border: 1px solid $color-accent;
+        position: absolute;
+        top: 60%;
+        left: 80%;
+        border-radius: 50%;
+        transition: .3s;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 10px;
+            height: 10px;
+            background-color: $color-accent;
+            border-radius: 50%;
+        }
+        &_active {
+            & .lookbook__catalog-card {
+                opacity: 1;
+                visibility: visible;
+                bottom: -100px;
+            }
+        }
+    }
+    &__catalog-card {
+        position: absolute;
+        right: 40px;
+        bottom: -170px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .lookbook {
+        &__catalog-card {
+            right: 0px;
+            bottom: -100px;
+        }
+        &__pointer {
+            &_active {
+                & .lookbook__catalog-card {
+                    bottom: -80px;
+                }
+            }
+        }
+    }
+}
